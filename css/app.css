@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  font-family: "IBM Plex Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0093e9;
+  background-image: linear-gradient(160deg, #0093e9 0%, #80d0c7 100%);
+}
+
+section {
+  display: inline-block;
+  width: 200px;
+}
+
+/* header */
+.header-in {
+  padding: 2rem;
+}
+
+.header-in h1 {
+  font-size: 1.2;
+  font-weight: 900;
+  color: aliceblue;
+  text-shadow: 2px 2px 2px lightblue;
+}
+
+/* main */
+.main-in {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+}
+
+.main-in section {
+  padding: 1rem;
+  width: 100%;
+}
+
+.list,
+.details {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+#taskForm > div {
+  padding: 0.25rem 0;
+}
+
+/* important chechbox */
+#important {
+  display: none;
+}
+#important:checked + label > .importantStar {
+  color: goldenrod;
+  text-shadow: 2px 2px 4px gold;
+}
+
+.importantStar {
+  color: grey;
+  font-size: 1.5rem;
+  transition: color 200ms linear;
+}
+
+.buton-div {
+  text-align: right;
+  padding: 1rem 0;
+}
+
+/* footer */
+.footer-in {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+}
+
+@media screen and (min-width: 720px) {
+  .main-in {
+    flex-direction: row;
+  }
+
+  .main-in section {
+    width: fit-content;
+  }
+
+  .list {
+    flex-grow: 1;
+  }
+}
