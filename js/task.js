@@ -18,5 +18,6 @@ class Task {
     this.location = location;
     this.alertText = alertText;
     this.status = status;
+    this.user = "Jerald";
   }
 }
