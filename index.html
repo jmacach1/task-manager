@@ -35,38 +35,68 @@
     <main class="main-in">
       <section class="taskList card">
         <h3>List</h3>
-        <div id="taskList"></div>
-        <!-- <div class="card tm-card-task">
-          <div class="card-header">
-            <h5 class="title">
-              <span class="star"><i class="fa fa-star"></i></span>
-              Fix The Toilets
-            </h5>
-            <p>Location: Boise, Idaho</p>
-            <p>Due Date: 2021-04-08 20:08</p>
-          </div>
-          <div class="card-body">
-            <p>
-              This is the Description of this task. May be living years likeness
-              they're land, creepeth brought subdue.
-            </p>
-          </div>
-        </div> -->
+        <div id="taskList">
+          <!-- <div id="task_855" class="card tm-card-task" data-id="855">
+            <div class="card-header">
+              <h5 class="title">
+                <span class="star"><i class="fa fa-star"></i></span>
+                Fix The Toilets
+              </h5>
+              <p>Location: Boise, Idaho</p>
+              <p>Due Date: 2021-04-08 20:08</p>
+            </div>
+            <div class="card-body">
+              <p>
+                This is the Description of this task. May be living years
+                likeness they're land, creepeth brought subdue.
+              </p>
+            </div>
+          </div> -->
+          <!-- <div id="task_235" class="card tm-card-task" data-id="235">
+            <div class="card-header">
+              <h5 class="title">
+                <span class="star"><i class="fa fa-star"></i></span>
+                Fix The Car
+              </h5>
+              <p>Location: Boise, Idaho</p>
+              <p>Due Date: 2021-04-08 23:08</p>
+            </div>
+            <div class="card-body">
+              <p>
+                This is the Description of this task. May be living years
+                likeness they're land, creepeth brought subdue.
+              </p>
+            </div>
+          </div> -->
+        </div>
       </section>
 
       <section id="details" class="details card">
         <h3>Task Details</h3>
 
-        <form id="taskForm">
+        <form id="taskForm" class="needs-validation">
           <div class="form-group">
             <label for="_id">Id</label>
-            <input id="_id" name="_id" type="text" class="form-control" />
+            <input
+              id="_id"
+              name="_id"
+              type="text"
+              class="form-control"
+              disabled
+            />
           </div>
 
           <!-- Title -->
           <div class="form-group">
             <label for="title">Title</label>
-            <input id="title" name="title" type="text" class="form-control" />
+            <input
+              id="title"
+              name="title"
+              type="text"
+              class="form-control"
+              minlength="5"
+              required
+            />
           </div>
 
           <!-- Description -->
@@ -77,6 +107,7 @@
               name="description"
               class="form-control"
               rows="3"
+              required
             ></textarea>
           </div>
 
@@ -127,8 +158,8 @@
 
           <div class="form-group">
             <label for="status">Status</label>
-            <select class="form-control" id="status" name="status">
-              <option disabled selected>-- Select Status --</option>
+            <select class="form-control" id="status" name="status" required>
+              <option selected>-- Select Status --</option>
               <option>Pending</option>
               <option>In Progress</option>
               <option>Blocked</option>
