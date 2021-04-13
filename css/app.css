@@ -96,6 +96,7 @@ section {
 .tm-card-task {
   margin-bottom: 0.5rem;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
 
 .tm-card-task p {
@@ -108,6 +109,11 @@ section {
 
 .tm-card-task .star {
   color: goldenrod;
+}
+
+.task-delete {
+  float: right;
+  color: rgb(218, 32, 32);
 }
 
 /* footer */
@@ -169,6 +175,7 @@ section {
   .details {
     flex-grow: 2;
   }
+
   .task-head-info {
     display: flex;
     flex-wrap: wrap;

@@ -48,12 +48,19 @@ function fetchTask() {
       }
       console.log(taskDB);
       displayTasks();
-      setTaskListeners();
     },
     error: function (error) {
       console.error(error);
     }
   });
+}
+
+function displayTasks() {
+  taskList.empty();
+  for (const task of taskDB.values()) {
+    taskList.append(createTaskCard(task));
+  }
+  setTaskListeners();
 }
 
 function setTaskListeners() {
@@ -62,10 +69,7 @@ function setTaskListeners() {
     $(task).off();
     $(task).click(function (e) {
       const id = Number(e.currentTarget.dataset.id);
-      console.log(id);
       const task = taskDB.get(id);
-      console.log(taskDB);
-      console.log(task);
       populateDetails(task);
     })
   }
@@ -155,13 +159,6 @@ function httpPostSendTask(task) {
       console.error(error);
     }
   });
-}
-
-function displayTasks() {
-  taskList.empty();
-  for (const task of taskDB.values()) {
-    taskList.append(createTaskCard(task));
-  }
 }
 
 function createTaskCard(task) {
