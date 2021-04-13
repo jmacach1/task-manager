@@ -1,7 +1,7 @@
 function testAddTask() {
   console.log('testAddTask');
   const elements = document.forms['taskForm'].elements;
-  elements[TASK_CONST.ID].value = "12356";
+  // elements[TASK_CONST.ID].value = "12356";
   elements[TASK_CONST.TITLE].value = "Test Title";
   elements[TASK_CONST.DESCRIPTION].value = "This is a New Task!!";
   elements[TASK_CONST.IMPORTANT].checked = 'true';

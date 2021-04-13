@@ -120,6 +120,39 @@ section {
   padding: 1rem;
 }
 
+/**
+  modal
+*/
+.tm-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-color: rgba(134, 134, 134, 0.5);
+  z-index: 1;
+}
+
+.tm-modal-content {
+  padding: 20px;
+  width: 70%;
+}
+
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(114, 4, 4);
+  text-decoration: none;
+  cursor: pointer;
+}
+
 @media screen and (min-width: 720px) {
   .main-in {
     flex-direction: row;
@@ -130,6 +163,15 @@ section {
   }
 
   .taskList {
-    flex-grow: 1;
+    flex-grow: 5;
+  }
+
+  .details {
+    flex-grow: 2;
+  }
+  .task-head-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
   }
 }
